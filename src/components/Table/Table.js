@@ -505,6 +505,7 @@ const Table = () => {
 
   return (
     <MDBDataTable
+      className='table'
       striped
       bordered
       small
