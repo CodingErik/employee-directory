@@ -1,8 +1,16 @@
+// eslint-disable-next-line
 import React, { useState, useEffect } from 'react';
 import { MDBDataTable } from 'mdbreact';
-import "./style.css"
+import "./style.css";
+import axios from "axios";
 
 const Table = () => {
+
+  //set up a state 
+
+
+
+
   // data for the table 
   const data = {
     columns: [
@@ -502,6 +510,20 @@ const Table = () => {
       }
     ]
   };
+
+  // this will run everytime the page is loaded 
+  useEffect(() => {
+
+    async function getUsers() {
+      // use this API to get random users 
+      let res = await axios.get('https://randomuser.me/api/?results=100&nat=us')
+
+      console.log(res.data.results);
+    }
+    getUsers()
+
+
+  }, [])
 
 
   return (
