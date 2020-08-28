@@ -4,9 +4,9 @@ import "./style.css"
 
 function Header() {
     return (
-        <Navbar bg="dark" variant="dark" className="p-3 display-flex justify-content-center Title">
-            <Navbar.Brand href="/" className='text-info' >
-                Employee Directory 
+        <Navbar className="p-3 display-flex justify-content-center Title shadow mb-4 ">
+            <Navbar.Brand href="/" className='text-white' >
+                <h1>Employee Directory </h1>
             </Navbar.Brand>
         </Navbar>
     )

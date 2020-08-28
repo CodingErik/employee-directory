@@ -3,6 +3,11 @@
 	justify-content: center;
 } 
 
+.Title {
+    background: rgb(41, 62, 74);
+}
+
+
 @media only screen and (max-width: 600px) {
 	.Title {
 		width: 500px;
