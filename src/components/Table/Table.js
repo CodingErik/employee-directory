@@ -1,8 +1,9 @@
-import React, {useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { MDBDataTable } from 'mdbreact';
+import "./style.css"
 
 const Table = () => {
-    // data for the table 
+  // data for the table 
   const data = {
     columns: [
       {
@@ -505,6 +506,7 @@ const Table = () => {
 
   return (
     <MDBDataTable
+      // responsive
       className='table'
       striped
       bordered
