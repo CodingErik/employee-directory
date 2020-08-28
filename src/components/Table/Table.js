@@ -1,8 +1,8 @@
-import React from 'react';
+import React, {useState, useEffect } from 'react';
 import { MDBDataTable } from 'mdbreact';
 
 const Table = () => {
-    // this is dummy data
+    // data for the table 
   const data = {
     columns: [
       {
@@ -502,7 +502,7 @@ const Table = () => {
     ]
   };
 
-  // returning the table 
+
   return (
     <MDBDataTable
       striped
