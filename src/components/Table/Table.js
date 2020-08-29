@@ -50,7 +50,6 @@ const Table = () => {
 
   // this will run everytime the page is loaded 
   useEffect(() => {
-
     async function getUsers() {
       // use this API to get random users 
       let res = await axios.get('https://randomuser.me/api/?results=50&nat=us')
@@ -68,8 +67,6 @@ const Table = () => {
       setRow(people); 
     }
     getUsers()
-
-
   }, [])
 
 
