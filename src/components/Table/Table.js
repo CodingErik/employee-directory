@@ -7,13 +7,57 @@ import axios from "axios";
 const Table = () => {
 
   //set up a state 
-
-
+  const [row, setRow] = useState([]);
+  const [columns, setColumns] = useState([
+    {
+      label: 'picture',
+      field: 'picture',
+      sort: 'asc',
+      width: 100
+    },
+    {
+      label: 'Name',
+      field: 'name',
+      sort: 'asc',
+      width: 150
+    },
+    {
+      label: 'Last',
+      field: 'Last',
+      sort: 'asc',
+      width: 150
+    },
+    {
+      label: 'DOB',
+      field: 'DOB',
+      sort: 'asc',
+      width: 150
+    },
+    {
+      label: 'Email',
+      field: 'Email',
+      sort: 'asc',
+      width: 200
+    },
+    {
+      label: 'phone',
+      field: 'phone',
+      sort: 'asc',
+      width: 150
+    }
+  ]); 
+  // EACH ON IS AN OBJECT 
 
 
   // data for the table 
   const data = {
     columns: [
+      {
+        label: 'picture',
+        field: 'picture',
+        sort: 'asc',
+        width: 100
+      },
       {
         label: 'Name',
         field: 'name',
@@ -21,34 +65,28 @@ const Table = () => {
         width: 150
       },
       {
-        label: 'Position',
-        field: 'position',
-        sort: 'asc',
-        width: 270
-      },
-      {
-        label: 'Office',
-        field: 'office',
-        sort: 'asc',
-        width: 200
-      },
-      {
-        label: 'Age',
-        field: 'age',
-        sort: 'asc',
-        width: 100
-      },
-      {
-        label: 'Start date',
-        field: 'date',
+        label: 'Last',
+        field: 'Last',
         sort: 'asc',
         width: 150
       },
       {
-        label: 'Salary',
-        field: 'salary',
+        label: 'DOB',
+        field: 'DOB',
         sort: 'asc',
-        width: 100
+        width: 150
+      },
+      {
+        label: 'Email',
+        field: 'Email',
+        sort: 'asc',
+        width: 200
+      },
+      {
+        label: 'phone',
+        field: 'phone',
+        sort: 'asc',
+        width: 150
       }
     ],
     rows: [
@@ -516,9 +554,15 @@ const Table = () => {
 
     async function getUsers() {
       // use this API to get random users 
-      let res = await axios.get('https://randomuser.me/api/?results=100&nat=us')
+      let res = await axios.get('https://randomuser.me/api/?results=50&nat=us')
 
-      console.log(res.data.results);
+      console.log(res.data.results.map(person => setRow()));
+      // picture.thumbnail 
+      // name.first
+      // name.last
+      // dob.date
+      // email 
+      // phone
     }
     getUsers()
 
