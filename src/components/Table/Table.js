@@ -54,7 +54,7 @@ const Table = () => {
     async function getUsers() {
       // use this API to get random users 
       let res = await axios.get('https://randomuser.me/api/?results=50&nat=us')
-
+      console.log(res.data.results); 
       let people = res.data.results.map(person => {
         return {
           first: person.name.first,
@@ -62,7 +62,7 @@ const Table = () => {
           dob: person.dob.date,
           email: person.email,
           phone: person.phone,
-          picture: person.picture.thumbnail ,
+          picture: <img src={person.picture.thumbnail} alt={person.name.first} />
         }
       });
       setRow(people); 
