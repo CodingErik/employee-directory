@@ -6,7 +6,7 @@ import axios from "axios";
 
 const Table = () => {
 
-  //set up a state 
+  //set up a state for rows and columns 
   const [rows, setRow] = useState([]);
   const [columns, setColumns] = useState([
     {
@@ -46,7 +46,7 @@ const Table = () => {
       width: 150
     }
   ]);
-  // EACH ON IS AN OBJECT 
+ 
 
   // this will run everytime the page is loaded 
   useEffect(() => {
