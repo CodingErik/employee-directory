@@ -2,6 +2,7 @@ import React from "react";
 import Navbar from 'react-bootstrap/Navbar'
 import "./style.css"
 
+// header component
 function Header() {
     return (
         <Navbar className="p-3 display-flex justify-content-center Title shadow mb-4 ">
