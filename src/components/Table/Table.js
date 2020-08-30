@@ -59,7 +59,7 @@ const Table = () => {
         return {
           first: person.name.first,
           last: person.name.last,
-          dob: person.dob.date,
+          dob: person.dob.date, // add moment.js to this 
           email: person.email,
           phone: person.phone,
           picture: <img src={person.picture.thumbnail} alt={person.name.first} />
