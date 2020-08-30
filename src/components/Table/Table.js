@@ -4,6 +4,7 @@ import { MDBDataTable } from 'mdbreact';
 import "./style.css";
 import axios from "axios";
 
+
 const Table = () => {
 
   //set up a state for rows and columns 
