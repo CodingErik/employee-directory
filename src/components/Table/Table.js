@@ -4,6 +4,12 @@ import { MDBDataTable } from 'mdbreact';
 import "./style.css";
 import axios from "axios";
 
+// importing moment 
+import moment from 'moment';
+
+
+console.log(moment().format())
+
 
 const Table = () => {
 
