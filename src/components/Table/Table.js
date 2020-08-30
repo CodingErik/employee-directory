@@ -8,9 +8,6 @@ import axios from "axios";
 import moment from 'moment';
 
 
-console.log(moment().format())
-
-
 const Table = () => {
 
   //set up a state for rows and columns 
@@ -65,7 +62,7 @@ const Table = () => {
         return {
           first: person.name.first,
           last: person.name.last,
-          dob: person.dob.date, // add moment.js to this 
+          dob: moment.utc(person.dob.date).format('L'),  
           email: person.email,
           phone: person.phone,
           picture: <img src={person.picture.thumbnail} alt={person.name.first} />
